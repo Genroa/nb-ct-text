@@ -7,7 +7,7 @@ Package.describe({
 	git: 'https://github.com/Genroa/nb-ct-text',
 	// By default, Meteor will default to using README.md for documentation.
 	// To avoid submitting documentation, set this field to null.
-	documentation: null
+	documentation: 'README.md'
 });
 
 Package.onUse(function(api) {
@@ -18,10 +18,14 @@ Package.onUse(function(api) {
 	api.use('genroa:nb-ct-base');
 
 	api.add_files("classes.js");
-	api.export('TextContent');
-
+	
 	api.add_files("text_content_template.html");
 	api.add_files("text_content_template.js");
+
+	api.add_files("creating_new_text_content_template.html");
+	api.add_files("creating_new_text_content_template.js");
+
+	api.export('TextContent');
 
 	api.mainModule('nb-ct-text.js');
 });

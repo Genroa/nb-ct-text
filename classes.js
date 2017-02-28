@@ -1,5 +1,4 @@
-import { Class } from 'meteor/jagi:astronomy';
-import { Content } from 'meteor/genroa:nb-ct-base';
+import { Content, ContentTypes } from 'meteor/genroa:nb-ct-base';
 
 TextContent = Content.inherit({
 	name: "TextContent",
@@ -13,13 +12,13 @@ TextContent = Content.inherit({
 			type: String,
 			default: function() {return "TextContent";}
 		},
-		canBeCreated: {
-			type: Boolean,
-			default: function() {return true;}
-		},
 		text: {
 			type: String,
 			default: function() {return "";}
+		},
+		creationFormTemplate: {
+			type: String,
+			default: function() {return "creating_new_text_content_template";}
 		}
 	},
 
@@ -29,3 +28,6 @@ TextContent = Content.inherit({
 		}
 	}
 });
+
+
+ContentTypes["TextContent"] = TextContent;
