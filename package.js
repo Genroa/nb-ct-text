@@ -13,7 +13,7 @@ Package.describe({
 Package.onUse(function(api) {
 	api.versionsFrom('1.4.3.1');
 	api.use('ecmascript');
-	api.use('jagi:astronomy');
+	api.use('jagi:astronomy@2.4.0');
 	api.use('blaze-html-templates');
 	api.use('genroa:nb-ct-base');
 
