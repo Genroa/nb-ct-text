@@ -28,6 +28,9 @@ Package.onUse(function(api) {
 	
 	api.addFiles("creating_content_text_block_template.html", "client");
 	api.addFiles("creating_content_text_block_template.js", "client");
+
+	api.addFiles("text_content_thumbnail_template.html", "client");
+	api.addFiles("text_content_thumbnail_template.js", "client");
 	
 	api.export('TextContent');
 

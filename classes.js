@@ -4,10 +4,6 @@ TextContent = Content.inherit({
 	name: "TextContent",
 	
 	fields: {
-		humanName:{
-			type: String,
-			default: function() {return "texte formaté";}
-		},
 		className: {
 			type: String,
 			default: function() {return "TextContent";}
@@ -26,7 +22,11 @@ TextContent = Content.inherit({
 });
 
 
-ContentTypes["TextContent"] = TextContent;
+ContentTypes.addType( {
+	class:  TextContent,
+	humanName: "texte formaté",
+	thumbnailTemplate: "text_content_thumbnail_template"
+});
 
 // Create text block but hide it from content management : onyl edit it in page
 ContentCreationOptions.addCreationOption({
