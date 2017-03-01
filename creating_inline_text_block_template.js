@@ -1,6 +1,6 @@
 import { Template } from 'meteor/templating';
 
 
-Template.text_content_template.helpers({
+Template.creating_inline_text_block_template.helpers({
 	'test': function(){}
 });

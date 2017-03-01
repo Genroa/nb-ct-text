@@ -15,16 +15,20 @@ Package.onUse(function(api) {
 	api.use('ecmascript');
 	api.use('jagi:astronomy@2.4.0');
 	api.use('blaze-html-templates');
+	api.use("templating", "client");
 	api.use('genroa:nb-ct-base');
 
-	api.add_files("classes.js");
+	api.addFiles("classes.js");
 	
-	api.add_files("text_content_template.html");
-	api.add_files("text_content_template.js");
+	api.addFiles("text_content_template.html", "client");
+	api.addFiles("text_content_template.js", "client");
 
-	api.add_files("creating_new_text_content_template.html");
-	api.add_files("creating_new_text_content_template.js");
-
+	api.addFiles("creating_inline_text_block_template.html", "client");
+	api.addFiles("creating_inline_text_block_template.js", "client");
+	
+	api.addFiles("creating_content_text_block_template.html", "client");
+	api.addFiles("creating_content_text_block_template.js", "client");
+	
 	api.export('TextContent');
 
 	api.mainModule('nb-ct-text.js');
