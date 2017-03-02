@@ -31,6 +31,7 @@ Package.onUse(function(api) {
 
 	api.addFiles("text_content_thumbnail_template.html", "client");
 	api.addFiles("text_content_thumbnail_template.js", "client");
+	api.addFiles("text.css", "client");
 	
 	api.export('TextContent');
 
