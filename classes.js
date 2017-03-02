@@ -17,16 +17,20 @@ TextContent = Content.inherit({
 	helpers: {
 		getTemplateName : function(obj) {
 			return "text_content_template";
+		},
+		
+		getThumbnailTemplate: function(obj) {
+			return "text_content_thumbnail_template";
+		},
+		
+		getHumanName: function() {
+			return "texte formaté";
 		}
 	}
 });
 
 
-ContentTypes.addType( {
-	class:  TextContent,
-	humanName: "texte formaté",
-	thumbnailTemplate: "text_content_thumbnail_template"
-});
+ContentTypes.addType(TextContent);
 
 // Create text block but hide it from content management : onyl edit it in page
 ContentCreationOptions.addCreationOption({
